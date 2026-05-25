@@ -1,126 +1,303 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NGUBOHLANGA MULTI-SERVICES (PTY) LTD</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NGUBOHLANGA MULTI-SERVICES (PTY) LTD</title>
 
-    <style>
-        body{
-            margin:0;
-            font-family: Arial, sans-serif;
-            background:#f5f5f5;
-        }
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+    }
 
-        header{
-            background:#0a2a43;
-            color:white;
-            text-align:center;
-            padding:20px;
-        }
+    body{
+      background:#0b0b0b;
+      color:#ffffff;
+    }
 
-        header h1{
-            margin:0;
-            font-size:28px;
-        }
+    header{
+      background:#050505;
+      padding:15px 8%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      border-bottom:2px solid #c89b3c;
+      position:sticky;
+      top:0;
+      z-index:10;
+    }
 
-        .hero{
-            background:#ffffff;
-            padding:40px 20px;
-            text-align:center;
-        }
+    header h1{
+      color:#ffd36a;
+      font-size:20px;
+    }
 
-        .hero h2{
-            color:#0a2a43;
-        }
+    nav a{
+      color:white;
+      margin-left:18px;
+      text-decoration:none;
+      font-size:14px;
+    }
 
-        .button{
-            background:#0a2a43;
-            color:white;
-            padding:15px 25px;
-            text-decoration:none;
-            border-radius:8px;
-            display:inline-block;
-            margin-top:15px;
-        }
+    .hero{
+      min-height:90vh;
+      background:
+      linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.85)),
+      url("images/logo.jpg");
+      background-size:cover;
+      background-position:center;
+      display:flex;
+      align-items:center;
+      padding:60px 8%;
+    }
 
-        .section{
-            padding:30px 20px;
-            background:white;
-            margin:20px;
-            border-radius:10px;
-        }
+    .hero-content{
+      max-width:650px;
+    }
 
-        .services{
-            display:grid;
-            grid-template-columns:1fr;
-            gap:10px;
-        }
+    .hero h2{
+      font-size:48px;
+      color:#ffd36a;
+      margin-bottom:15px;
+    }
 
-        .service-box{
-            background:#eeeeee;
-            padding:15px;
-            border-radius:8px;
-        }
+    .hero p{
+      font-size:18px;
+      line-height:1.6;
+      margin-bottom:25px;
+    }
 
-        footer{
-            background:#0a2a43;
-            color:white;
-            text-align:center;
-            padding:20px;
-        }
-    </style>
+    .btn{
+      display:inline-block;
+      background:#c89b3c;
+      color:#000;
+      padding:14px 24px;
+      border-radius:6px;
+      text-decoration:none;
+      font-weight:bold;
+      margin:5px;
+    }
+
+    .btn-dark{
+      background:#111;
+      color:#ffd36a;
+      border:1px solid #c89b3c;
+    }
+
+    section{
+      padding:55px 8%;
+    }
+
+    .title{
+      color:#ffd36a;
+      font-size:32px;
+      margin-bottom:25px;
+      text-align:center;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+      gap:20px;
+    }
+
+    .card{
+      background:#151515;
+      padding:25px;
+      border-radius:12px;
+      border:1px solid #3a2a10;
+      box-shadow:0 0 15px rgba(200,155,60,0.15);
+    }
+
+    .card h3{
+      color:#ffd36a;
+      margin-bottom:10px;
+    }
+
+    .booking{
+      background:#111;
+      border-top:1px solid #c89b3c;
+      border-bottom:1px solid #c89b3c;
+      text-align:center;
+    }
+
+    .review{
+      font-style:italic;
+      line-height:1.6;
+    }
+
+    .stars{
+      color:#ffd36a;
+      font-size:22px;
+      margin-bottom:10px;
+    }
+
+    .contact{
+      text-align:center;
+      background:#050505;
+    }
+
+    footer{
+      background:#000;
+      text-align:center;
+      padding:20px;
+      border-top:1px solid #c89b3c;
+      color:#aaa;
+    }
+
+    .whatsapp{
+      position:fixed;
+      right:20px;
+      bottom:20px;
+      background:#25D366;
+      color:white;
+      padding:15px 18px;
+      border-radius:50px;
+      text-decoration:none;
+      font-weight:bold;
+      box-shadow:0 0 20px rgba(0,0,0,0.4);
+      z-index:20;
+    }
+
+    iframe{
+      width:100%;
+      height:300px;
+      border:0;
+      border-radius:12px;
+    }
+
+    @media(max-width:700px){
+      header{
+        display:block;
+        text-align:center;
+      }
+
+      nav{
+        margin-top:10px;
+      }
+
+      nav a{
+        display:inline-block;
+        margin:8px;
+      }
+
+      .hero h2{
+        font-size:34px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
 <header>
-    <h1>NGUBOHLANGA MULTI-SERVICES (PTY) LTD</h1>
-    <p>Construction & Multi-Services Company</p>
+  <h1>NGUBOHLANGA</h1>
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#booking">Book</a>
+    <a href="#stores">Stores</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Contact</a>
+  </nav>
 </header>
 
 <section class="hero">
-    <h2>Professional Construction & Carpentry Services</h2>
-
+  <div class="hero-content">
+    <h2>Professional Construction & Built-in Solutions</h2>
     <p>
-        We provide quality construction, built-in cupboards,
-        roofing, tiling, renovations and infrastructure services
-        across South Africa.
+      NGUBOHLANGA MULTI-SERVICES (PTY) LTD provides construction,
+      carpentry, built-in cupboards, roofing, ceilings, tiling,
+      paving, plumbing, renovations and maintenance services.
     </p>
 
-    <a class="button" href="https://wa.me/27839444351">
-        Book a Quotation
-    </a>
+    <a class="btn" href="#booking">Book Site Inspection</a>
+    <a class="btn btn-dark" href="https://wa.me/27839444351">Chat on WhatsApp</a>
+  </div>
 </section>
 
-<section class="section">
-    <h2>Our Services</h2>
+<section id="services">
+  <h2 class="title">Our Core Services</h2>
 
-    <div class="services">
-        <div class="service-box">Building Construction</div>
-        <div class="service-box">Carpentry & Built-in Cupboards</div>
-        <div class="service-box">Roofing & Ceiling Installation</div>
-        <div class="service-box">Tiling & Finishing</div>
-        <div class="service-box">Roads & Paving Works</div>
-        <div class="service-box">Water Installation & Plumbing</div>
-        <div class="service-box">Renovations & Maintenance</div>
+  <div class="grid">
+    <div class="card"><h3>Building Construction</h3><p>Residential, commercial and public building construction.</p></div>
+    <div class="card"><h3>Built-in Cupboards</h3><p>Carpentry, wardrobes, kitchens and custom woodwork.</p></div>
+    <div class="card"><h3>Roofing & Ceilings</h3><p>Roofing, ceiling boards, partitions and finishing.</p></div>
+    <div class="card"><h3>Tiling & Finishing</h3><p>Floor tiles, wall tiles and professional finishing works.</p></div>
+    <div class="card"><h3>Roads & Paving</h3><p>Paving, small infrastructure and outdoor construction support.</p></div>
+    <div class="card"><h3>Plumbing & Water</h3><p>Water installation, maintenance and plumbing support services.</p></div>
+  </div>
+</section>
+
+<section id="booking" class="booking">
+  <h2 class="title">Book a Quotation / Site Inspection</h2>
+  <p>Send your location, pictures, measurements and preferred date. We will confirm availability.</p>
+  <br>
+  <a class="btn" href="https://wa.me/27839444351?text=Hello%20NGUBOHLANGA%2C%20I%20want%20to%20book%20a%20site%20inspection%20or%20quotation.">Book on WhatsApp</a>
+  <a class="btn btn-dark" href="mailto:memabonga@gmail.com">Request by Email</a>
+</section>
+
+<section id="stores">
+  <h2 class="title">Material & Hardware Store Locations</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Gelmar Stores</h3>
+      <p>Use Gelmar for handles, hinges, drawer runners and cupboard hardware.</p>
+      <a class="btn" href="https://www.google.com/maps/search/Gelmar+South+Africa" target="_blank">View Gelmar Map</a>
     </div>
+
+    <div class="card">
+      <h3>Wood & Board Stores</h3>
+      <p>Find board, timber and wood suppliers near your project location.</p>
+      <a class="btn" href="https://www.google.com/maps/search/wood+stores+near+me" target="_blank">View Wood Stores</a>
+    </div>
+
+    <div class="card">
+      <h3>Screws & Tools</h3>
+      <p>Find screws, tools, adhesives and construction supplies.</p>
+      <a class="btn" href="https://www.google.com/maps/search/hardware+stores+near+me" target="_blank">View Hardware Stores</a>
+    </div>
+  </div>
 </section>
 
-<section class="section">
-    <h2>Contact Us</h2>
+<section id="reviews">
+  <h2 class="title">Customer Reviews</h2>
 
-    <p><strong>Phone:</strong> 083 944 4351</p>
-    <p><strong>Email:</strong> memabonga@gmail.com</p>
+  <div class="grid">
+    <div class="card review">
+      <div class="stars">★★★★★</div>
+      “Professional workmanship and clear communication. The job was completed neatly.”
+    </div>
 
-    <a class="button" href="mailto:memabonga@gmail.com">
-        Send Email
-    </a>
+    <div class="card review">
+      <div class="stars">★★★★★</div>
+      “Reliable team for built-in cupboards and renovations. Highly recommended.”
+    </div>
+
+    <div class="card review">
+      <div class="stars">★★★★★</div>
+      “Good service, fair pricing and quality finishing.”
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <h2 class="title">Contact NGUBOHLANGA</h2>
+  <p><strong>Phone:</strong> 083 944 4351</p>
+  <p><strong>Email:</strong> memabonga@gmail.com</p>
+  <br>
+  <a class="btn" href="tel:0839444351">Call Now</a>
+  <a class="btn btn-dark" href="mailto:memabonga@gmail.com">Email Us</a>
 </section>
 
 <footer>
-    <p>© 2026 NGUBOHLANGA MULTI-SERVICES (PTY) LTD</p>
+  <p>© 2026 NGUBOHLANGA MULTI-SERVICES (PTY) LTD. All rights reserved.</p>
 </footer>
+
+<a class="whatsapp" href="https://wa.me/27839444351">WhatsApp</a>
 
 </body>
 </html>
