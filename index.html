@@ -7,39 +7,56 @@
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
-body{background:#050505;color:#fff}
-header{background:#000;padding:15px 6%;display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid #FFD700;position:sticky;top:0;z-index:1000}
-header h1{color:#FFD700;font-size:20px}
-nav a{color:white;text-decoration:none;margin-left:13px;font-size:14px}
-.hero{background:linear-gradient(rgba(0,0,0,.70),rgba(0,0,0,.88)),url("logo ngubohlanga.jpeg");background-size:cover;background-position:center;min-height:78vh;display:flex;align-items:center;padding:50px 6%}
-.hero-content{max-width:700px;background:rgba(0,0,0,.55);padding:30px;border-left:5px solid #FFD700;border-radius:14px}
-.hero h2{font-size:44px;color:#FFD700;margin-bottom:15px}
-.hero p{font-size:18px;line-height:1.6;margin-bottom:18px}
-.btn{display:inline-block;background:#FFD700;color:#000;padding:13px 22px;border-radius:8px;text-decoration:none;font-weight:bold;margin:5px}
-.btn-dark{background:#111;color:#FFD700;border:1px solid #FFD700}
-section{padding:50px 6%}
-.title{text-align:center;color:#FFD700;font-size:32px;margin-bottom:25px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
-.box{background:#111;border:1px solid #B8860B;border-radius:14px;padding:22px;box-shadow:0 0 15px rgba(255,215,0,.12)}
-.box h3{color:#FFD700;margin-bottom:10px}
+body{background:#050505;color:white}
+:root{--gold:#FFD700;--brown:#9b6b24;--dark:#0b0b0b}
+
+header{background:#000;padding:15px 6%;display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid var(--gold);position:sticky;top:0;z-index:99}
+.logo{color:var(--gold);font-size:20px;font-weight:bold}
+nav a{color:white;text-decoration:none;margin-left:14px;font-size:14px}
+nav a:hover{color:var(--gold)}
+
+.hero{min-height:85vh;background:linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.9)),url("logo ngubohlanga.jpeg");background-size:cover;background-position:center;display:flex;align-items:center;padding:60px 6%}
+.hero-box{max-width:700px;background:rgba(0,0,0,.65);padding:35px;border-left:6px solid var(--gold);border-radius:16px}
+.hero h1{font-size:48px;color:var(--gold);margin-bottom:15px}
+.hero p{font-size:18px;line-height:1.7;margin-bottom:20px}
+
+.btn{display:inline-block;background:var(--gold);color:#000;padding:13px 22px;border-radius:8px;text-decoration:none;font-weight:bold;margin:6px}
+.btn-dark{background:#111;color:var(--gold);border:1px solid var(--gold)}
+
+section{padding:55px 6%}
+.title{text-align:center;color:var(--gold);font-size:34px;margin-bottom:30px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.box{background:#111;border:1px solid var(--brown);border-radius:15px;padding:22px;box-shadow:0 0 18px rgba(255,215,0,.12)}
+.box h3{color:var(--gold);margin-bottom:10px}
 .box p,.box li{line-height:1.6;color:#eee}
+
+.icon-box{text-align:center}
+.icon{font-size:34px;margin-bottom:10px}
+
 .projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
-.projects-grid img{width:100%;height:240px;object-fit:cover;border-radius:14px;display:block;border:1px solid #B8860B}
-.booking,.contact{background:#0d0d0d;text-align:center;border-top:1px solid #B8860B;border-bottom:1px solid #B8860B}
-.stars{color:#FFD700;font-size:22px;margin-bottom:8px}
-footer{background:#000;text-align:center;padding:20px;color:#ccc;border-top:1px solid #FFD700}
-.whatsapp{position:fixed;right:18px;bottom:18px;background:#25D366;color:white;padding:15px 20px;border-radius:50px;text-decoration:none;font-weight:bold;z-index:1000}
+.projects-grid img{width:100%;height:230px;object-fit:cover;border-radius:15px;border:1px solid var(--brown);display:block}
+
+.form-box{max-width:900px;margin:auto;background:#111;border:1px solid var(--brown);border-radius:16px;padding:25px}
+label{display:block;color:var(--gold);font-weight:bold;margin-top:15px}
+input,select,textarea{width:100%;padding:13px;margin-top:7px;border-radius:8px;border:1px solid var(--brown);background:#050505;color:white}
+textarea{height:120px}
+
+.booking,.contact{background:#0d0d0d;text-align:center;border-top:1px solid var(--brown);border-bottom:1px solid var(--brown)}
+.stars{color:var(--gold);font-size:22px;margin-bottom:8px}
+footer{background:#000;text-align:center;padding:20px;color:#ccc;border-top:1px solid var(--gold)}
+.whatsapp{position:fixed;right:18px;bottom:18px;background:#25D366;color:white;padding:15px 20px;border-radius:50px;text-decoration:none;font-weight:bold;z-index:100}
+
 @media(max-width:768px){
 header{display:block;text-align:center}
 nav{margin-top:10px}
 nav a{display:inline-block;margin:6px}
-.hero{min-height:62vh;padding:30px 5%}
-.hero-content{padding:20px}
-.hero h2{font-size:30px}
+.hero{min-height:65vh;padding:35px 5%}
+.hero-box{padding:22px}
+.hero h1{font-size:32px}
 .hero p{font-size:15px}
-section{padding:35px 5%}
+section{padding:38px 5%}
+.title{font-size:27px}
 .projects-grid img{height:200px}
-.title{font-size:26px}
 }
 </style>
 </head>
@@ -47,22 +64,22 @@ section{padding:35px 5%}
 <body>
 
 <header>
-<h1>NGUBOHLANGA</h1>
+<div class="logo">NGUBOHLANGA</div>
 <nav>
 <a href="#about">About</a>
 <a href="#services">Services</a>
 <a href="#projects">Projects</a>
+<a href="#quote">Quote</a>
 <a href="#stores">Stores</a>
-<a href="#booking">Book</a>
 <a href="#contact">Contact</a>
 </nav>
 </header>
 
 <section class="hero">
-<div class="hero-content">
-<h2>Professional Construction & Built-in Solutions</h2>
-<p>NGUBOHLANGA MULTI-SERVICES (PTY) LTD delivers quality, reliable and sustainable construction solutions across South Africa.</p>
-<a class="btn" href="#booking">Book Site Inspection</a>
+<div class="hero-box">
+<h1>Professional Construction & Built-in Solutions</h1>
+<p>NGUBOHLANGA MULTI-SERVICES (PTY) LTD delivers quality construction, carpentry, built-in cupboards, roofing, ceilings, tiling, paving, plumbing, renovations and project support services.</p>
+<a class="btn" href="#quote">Request Quotation</a>
 <a class="btn btn-dark" href="https://wa.me/27839444351">WhatsApp Us</a>
 </div>
 </section>
@@ -71,33 +88,115 @@ section{padding:35px 5%}
 <h2 class="title">Company Overview</h2>
 <div class="box">
 <p>NGUBOHLANGA MULTI-SERVICES (PTY) LTD is a South African construction company committed to delivering quality, reliable and sustainable construction solutions.</p><br>
-<p>The company operates with a strong focus on infrastructure development and building construction, aiming to contribute meaningfully to community development, job creation and economic growth.</p><br>
+<p>The company focuses on infrastructure development and building construction, contributing to community development, job creation and economic growth.</p><br>
 <p>We combine technical skills, practical experience and professional workmanship to deliver projects that meet client expectations, regulatory standards and industry best practices.</p>
-</div>
-</section>
-
-<section>
-<h2 class="title">Company Details</h2>
-<div class="grid">
-<div class="box"><h3>Registered Name</h3><p>NGUBOHLANGA MULTI-SERVICES (PTY) LTD</p></div>
-<div class="box"><h3>Business Type</h3><p>Construction & Multi-Services Company</p></div>
-<div class="box"><h3>Industry</h3><p>Construction & Infrastructure Development</p></div>
-<div class="box"><h3>Country</h3><p>South Africa</p></div>
 </div>
 </section>
 
 <section id="services">
 <h2 class="title">NGUBOHLANGA MULTI-SERVICES Offers</h2>
 <div class="grid">
-<div class="box"><h3>Building Construction</h3><p>Residential, commercial and public buildings.</p></div>
-<div class="box"><h3>Carpentry & Built-in Cupboards</h3><p>Custom cupboards, wardrobes, kitchens and woodwork.</p></div>
-<div class="box"><h3>Roofing, Ceiling & Partition</h3><p>Roofing, ceilings and partition installation.</p></div>
-<div class="box"><h3>Tiling & Finishing Works</h3><p>Floor tiles, wall tiles and professional finishing.</p></div>
-<div class="box"><h3>Roads & Paving Works</h3><p>Paving, walkways and small road support works.</p></div>
-<div class="box"><h3>Bridges & Small Infrastructure</h3><p>Small infrastructure and project support services.</p></div>
-<div class="box"><h3>Water Installation & Plumbing</h3><p>Water installation, plumbing and maintenance.</p></div>
-<div class="box"><h3>Renovations & Maintenance</h3><p>Alterations, repairs and general maintenance.</p></div>
-<div class="box"><h3>General Construction Support</h3><p>Project support and construction assistance.</p></div>
+<div class="box icon-box"><div class="icon">🏗️</div><h3>Building Construction</h3><p>Residential, commercial and public buildings.</p></div>
+<div class="box icon-box"><div class="icon">🪚</div><h3>Carpentry & Built-in Cupboards</h3><p>Wardrobes, kitchens and custom woodwork.</p></div>
+<div class="box icon-box"><div class="icon">🏠</div><h3>Roofing & Ceilings</h3><p>Roofing, ceiling and partition installation.</p></div>
+<div class="box icon-box"><div class="icon">🧱</div><h3>Tiling & Finishing</h3><p>Floor tiles, wall tiles and finishing works.</p></div>
+<div class="box icon-box"><div class="icon">🛣️</div><h3>Roads & Paving</h3><p>Paving, roads and small infrastructure projects.</p></div>
+<div class="box icon-box"><div class="icon">🚰</div><h3>Water & Plumbing</h3><p>Water installation and plumbing services.</p></div>
+<div class="box icon-box"><div class="icon">🔨</div><h3>Renovations</h3><p>Alterations, repairs and maintenance.</p></div>
+<div class="box icon-box"><div class="icon">📋</div><h3>Project Support</h3><p>General construction and project support.</p></div>
+</div>
+</section>
+
+<section id="projects">
+<h2 class="title">Project Gallery</h2>
+<div class="projects-grid">
+<img src="work1.jpg" alt="Project 1">
+<img src="work2.jpg" alt="Project 2">
+<img src="work3.jpg" alt="Project 3">
+<img src="work4.jpeg" alt="Project 4">
+<img src="work5.jpeg" alt="Project 5">
+<img src="work7.jpeg" alt="Project 7">
+<img src="work8.jpeg" alt="Project 8">
+<img src="work9.jpeg" alt="Project 9">
+<img src="work10.jpeg" alt="Project 10">
+</div>
+</section>
+
+<section id="quote" class="booking">
+<h2 class="title">Request a Quotation / Site Inspection</h2>
+
+<div class="form-box">
+<form action="mailto:memabonga@gmail.com" method="post" enctype="text/plain">
+
+<label>Client Full Name</label>
+<input type="text" name="Client Name" placeholder="Enter your full name">
+
+<label>Phone Number</label>
+<input type="tel" name="Phone" placeholder="Enter your phone number">
+
+<label>Email Address</label>
+<input type="email" name="Email" placeholder="Enter your email">
+
+<label>Client Location / Address</label>
+<input type="text" name="Location" placeholder="Example: Khayelitsha, Cape Town">
+
+<label>Service Needed</label>
+<select name="Service">
+<option>Built-in Cupboards</option>
+<option>Building Construction</option>
+<option>Roofing & Ceilings</option>
+<option>Tiling & Finishing</option>
+<option>Plumbing / Water Installation</option>
+<option>Roads & Paving</option>
+<option>Renovations & Maintenance</option>
+<option>Other Construction Service</option>
+</select>
+
+<label>Preferred Date</label>
+<input type="date" name="Preferred Date">
+
+<label>Preferred Time</label>
+<input type="time" name="Preferred Time">
+
+<label>Project Details / Measurements</label>
+<textarea name="Project Details" placeholder="Write measurements, room size, work needed, budget and extra notes."></textarea>
+
+<button class="btn" type="submit">Send Quotation Request</button>
+</form>
+
+<br>
+<p><strong>Owner availability:</strong> The owner can confirm, reject or reschedule the inspection after receiving the request.</p>
+<a class="btn btn-dark" href="https://calendar.google.com/calendar/u/0/r" target="_blank">Owner Calendar</a>
+<a class="btn" href="https://wa.me/27839444351?text=Hello%20NGUBOHLANGA%2C%20I%20want%20to%20book%20a%20quotation%20or%20site%20inspection.">Book on WhatsApp</a>
+</div>
+</section>
+
+<section id="stores">
+<h2 class="title">Material & Hardware Store Locations</h2>
+<div class="grid">
+<div class="box">
+<h3>Gelmar Stores</h3>
+<p>For handles, hinges, drawer runners and cupboard hardware.</p>
+<a class="btn" href="https://www.google.com/maps/search/Gelmar+South+Africa" target="_blank">View Gelmar Map</a>
+</div>
+
+<div class="box">
+<h3>Citiwood / Wood Suppliers</h3>
+<p>For boards, timber, MDF, cutting and carpentry materials.</p>
+<a class="btn" href="https://www.google.com/maps/search/Citiwood+South+Africa" target="_blank">View Citiwood Map</a>
+</div>
+
+<div class="box">
+<h3>Screw Warehouse</h3>
+<p>For screws, fixings, fasteners, tools and construction hardware.</p>
+<a class="btn" href="https://www.google.com/maps/search/Screw+Warehouse+South+Africa" target="_blank">View Screw Warehouse</a>
+</div>
+
+<div class="box">
+<h3>Client Location Search</h3>
+<p>Use this to check client distance and nearby project area.</p>
+<a class="btn" href="https://www.google.com/maps/search/client+location+near+me" target="_blank">Open Google Maps</a>
+</div>
 </div>
 </section>
 
@@ -105,69 +204,9 @@ section{padding:35px 5%}
 <h2 class="title">Vision, Mission & Values</h2>
 <div class="grid">
 <div class="box"><h3>Vision</h3><p>To become a leading and trusted construction company known for excellence, integrity and transforming communities through sustainable infrastructure development.</p></div>
-<div class="box"><h3>Mission</h3><p>To provide high-quality construction services that exceed client expectations while creating employment opportunities and developing local skills.</p></div>
-<div class="box"><h3>Core Values</h3><p>Quality, integrity, safety, reliability and community development.</p></div>
+<div class="box"><h3>Mission</h3><p>To provide high-quality construction services that exceed client expectations while creating employment opportunities, developing local skills and contributing to socio-economic growth.</p></div>
+<div class="box"><h3>Values</h3><p>Quality, integrity, safety, reliability and community development.</p></div>
 </div>
-</section>
-
-<section>
-<h2 class="title">Health, Safety & Environment</h2>
-<div class="box">
-<p>NGUBOHLANGA MULTI-SERVICES (PTY) LTD is committed to maintaining a safe working environment and minimizing environmental impact. We comply with relevant occupational health and safety regulations and promote responsible construction practices.</p>
-</div>
-</section>
-
-<section>
-<h2 class="title">Target Market</h2>
-<div class="grid">
-<div class="box">Government Departments & Municipalities</div>
-<div class="box">Private Sector Clients</div>
-<div class="box">Property Developers</div>
-<div class="box">Schools, Clinics & Community Projects</div>
-<div class="box">Residential Homeowners</div>
-</div>
-</section>
-
-<section>
-<h2 class="title">Competitive Advantage</h2>
-<div class="grid">
-<div class="box">Skilled and experienced workforce</div>
-<div class="box">Commitment to quality and customer satisfaction</div>
-<div class="box">Flexible and client-focused approach</div>
-<div class="box">Strong understanding of local construction needs</div>
-<div class="box">Cost-effective and efficient service delivery</div>
-</div>
-</section>
-
-<section id="projects">
-<h2 class="title">Our Completed Projects</h2>
-<div class="projects-grid">
-<img src="work1.jpeg" alt="Completed project 1">
-<img src="work2.jpeg" alt="Completed project 2">
-<img src="work3.jpeg" alt="Completed project 3">
-<img src="work4.jpeg" alt="Completed project 4">
-<img src="work5.jpeg" alt="Completed project 5">
-<img src="work7.jpeg" alt="Completed project 7">
-<img src="work8.jpeg" alt="Completed project 8">
-<img src="work9.jpeg" alt="Completed project 9">
-<img src="work10 jpeg" alt="Completed project 10">
-</div>
-</section>
-
-<section id="stores">
-<h2 class="title">Material & Hardware Store Locations</h2>
-<div class="grid">
-<div class="box"><h3>Gelmar Stores</h3><p>Handles, hinges, drawer runners and cupboard hardware.</p><a class="btn" href="https://www.google.com/maps/search/Gelmar+South+Africa" target="_blank">View Gelmar</a></div>
-<div class="box"><h3>Citiwood Stores</h3><p>Boards, timber, wood cutting and carpentry materials.</p><a class="btn" href="https://www.google.com/maps/search/Citiwood+South+Africa" target="_blank">View Citiwood</a></div>
-<div class="box"><h3>Screw Warehouse</h3><p>Screws, fixings, fasteners, tools and hardware supplies.</p><a class="btn" href="https://www.google.com/maps/search/Screw+Warehouse+South+Africa" target="_blank">View Screw Warehouse</a></div>
-</div>
-</section>
-
-<section id="booking" class="booking">
-<h2 class="title">Book a Quotation / Site Inspection</h2>
-<p>Send your location, pictures, measurements and preferred date.</p><br>
-<a class="btn" href="https://wa.me/27839444351?text=Hello%20NGUBOHLANGA%2C%20I%20want%20to%20book%20a%20site%20inspection%20or%20quotation.">Book on WhatsApp</a>
-<a class="btn btn-dark" href="mailto:memabonga@gmail.com">Request by Email</a>
 </section>
 
 <section id="reviews">
@@ -175,7 +214,7 @@ section{padding:35px 5%}
 <div class="grid">
 <div class="box"><div class="stars">★★★★★</div><p>Professional workmanship and neat finishing.</p></div>
 <div class="box"><div class="stars">★★★★★</div><p>Reliable team for built-in cupboards and renovations.</p></div>
-<div class="box"><div class="stars">★★★★★</div><p>Good service, fair pricing and quality finishing.</p></div>
+<div class="box"><div class="stars">★★★★★</div><p>Good service, fair pricing and quality work.</p></div>
 </div>
 </section>
 
@@ -193,7 +232,5 @@ section{padding:35px 5%}
 
 <a class="whatsapp" href="https://wa.me/27839444351">WhatsApp</a>
 
-
-</section>
 </body>
 </html>
